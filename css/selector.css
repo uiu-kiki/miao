@@ -1,0 +1,88 @@
+body{
+    background-color: rgb(163, 162, 162);
+}
+
+body > p:first-child {
+    color: red;
+}
+
+p.a:hover {
+    color: red;
+}
+p.a:focus {
+    color: skyblue;
+}
+p.a:active {
+    color: green;
+}
+
+.a.c > span{
+    color: red;
+}
+.a.c > span span:first-child{
+    color: green;
+}
+.a.c > span span:last-child{
+    color: blue;
+}
+
+div > p{
+    color: white;
+}
+a{
+    display: block;
+}
+div a:visited{
+    color: orange;
+}
+div a:link{
+    color: pink;
+}
+div a[href="mailto:a@b.com" i]{
+    color: blue;
+}
+div a[href^="tel"]{
+    color: yellow;
+}
+div a[href$="pdf" i]{
+    font-size: 30px;
+}
+
+div.a ul li:nth-of-type(4){
+    color: red;
+}
+div.a ul li:nth-of-type(5){
+    color: red;
+}
+div.a ul li:nth-of-type(6){
+    color: red;
+}
+div.a ul li:nth-of-type(7){
+    color: red;
+}
+
+div.b ul li:nth-child(n+25){
+    color: red;
+}
+div.b ul li:nth-child(n+35){
+    color: blue;
+}
+div.b ul li:nth-child(n+51){
+    color: red;
+}
+div.b ul li:nth-child(n+65){
+    color: green;
+}
+
+div.prime ul li:nth-child(even){
+    color: aqua;
+}
+div.prime ul li:nth-child(odd){
+    color: lawngreen;
+}
+div.prime ul li:nth-child(2){
+    color: lawngreen;
+}
+div.prime ul li:first-child{
+    color: black;
+}
