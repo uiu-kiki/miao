@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        .a{
+            min-width: 590px;
+            width: auto;
+            margin: 30px;
+            background-color: red;
+        }
+        .a p{
+            width: 590px;
+            margin: 0 auto;
+            background-color: red;
+        }
+        /* 2. */
+        .b{
+            box-sizing: border-box;
+            max-width: 600px;
+            padding: 10px;
+            margin: 0 auto;
+            border: 3px solid black;
+        }
+        .b .text{
+            height: 65px;
+            overflow: auto;
+        }
+        .b .b-1{
+            margin-bottom: 20px;
+        }
+        .b .b-2{
+            width: auto;
+            height: 50px;
+            background-color: violet;
+            margin-bottom: 20px;
+        }
+        .b .b-2:hover{
+            margin-left: -10px;
+            margin-right: -10px;
+        }
+        /* 3. */
+        .triangle{
+            width: 0;
+            height: 0;
+            margin: 50px auto;
+            border: 50px solid transparent;
+            border-bottom-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="a">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt at, ea natus cupiditate assumenda deserunt ex maxime dignissimos. Soluta laudantium id architecto fugit labore fuga consequatur placeat laboriosam dolorum! Incidunt!</p>
+    </div>
+    <div class="b">
+        <section class="b-1 text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae sapiente voluptas officiis, praesentium, nemo iure cumque nihil, facere hic asperiores dicta commodi magni, voluptates eaque esse atque nesciunt! Cupiditate, modi.</section>
+        <section class="b-2"></section>
+        <section class="b-3 text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos modi accusantium deleniti consequuntur, enim nulla voluptatum qui ducimus esse rem eius eligendi consequatur sint. Sunt ut, est iusto neque numquam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam animi perspiciatis eos, molestias provident, quae ullam! Obcaecati suscipit optio labore iusto veniam facere, amet officiis, eveniet voluptatibus molestiae, dignissimos dolor!</section>
+    </div>
+    <div class="triangle"></div>
+</body>
+</html>

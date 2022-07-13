@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        .a-wrapper{
+            min-width: 596px;
+            width: auto;
+            background-color: black;
+        }
+        .a-wrapper p{
+            width: 596px;
+            margin: auto;
+            color: white;
+            background-color: black;
+        }
+        /* 2.0 */
+        .main{
+            display: flow-root;
+        }
+        .main .center{
+            width: 600px;
+            margin: auto;
+        }
+        .main .center.top{
+            margin: 15px auto;
+        }
+        .main .center.intro ul li{
+            box-sizing: border-box;
+            width: 180px;
+            height: 40px;
+            border: 3px solid black;
+            margin-bottom: 15px;
+            text-align: center;
+            background-color: pink;
+        }
+        .main .center.intro ul li:nth-child(n+5){
+            margin-left: 210px;
+        }
+        .main .center.intro ul li:nth-child(n+9){
+            margin-left: 420px;
+        }
+        .main .center.intro ul li:hover{
+            background-color: red;
+        }
+        /* (40+15)*3 + 40 = 205 + 15 */
+        .main .center.intro ul li:nth-child(4n+5){
+            margin-top: -220px;
+        }
+        .main .center.footer ul{
+            overflow: hidden;
+        }
+        .main .center.footer ul li{
+            padding-top: 1px;
+            margin-bottom: -1px;
+            border-bottom: 1px dashed black;
+        }
+        /* 3.0 */
+        .copy{
+            margin-top: 20px;
+            background-color: pink;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="a-wrapper">
+        <p>
+            hello world 请调整浏览器窗口大小查看效果hello world 请调整浏览器窗口大小查看效果hello world 请调整浏览器窗口大小查看效果hello world 请调整浏览器窗口大小查看效果hello world 请调整浏览器窗口大小查看效果hello world 请调整浏览器窗口大小查看效果
+        </p>
+    </div>
+    <div class="main">
+        <p class="center top">
+            页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px
+        </p>
+        <div class="center intro">
+            <!-- 行 / 列 排版 -->
+            <ul>
+                <li>产品</li>
+                <li>产品</li>
+                <li>产品</li>
+                <li>产品</li>
+                <li>产品</li>
+                <li>产品</li>
+                <li>产品</li>
+                <li>产品</li>
+                <li>产品</li>
+                <li>产品</li>
+                <li>产品</li>
+                <li>产品</li>
+            </ul>
+        </div>
+        <div class="center footer">
+            <ul>
+                <li>link</li>
+                <li>link</li>
+                <li>link</li>
+                <li>link</li>
+                <li>link</li>
+            </ul>
+        </div>
+    </div>
+    <div class="copy">
+        <p>&copy;版权所有</p>
+        <p>本页所有布局均使用块元素</p>
+    </div>
+</body>
+</html>
