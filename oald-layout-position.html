@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html, body{
+            height: 100%;
+        }
+        .aside{
+            position: absolute;
+            width: calc(40% / 3);
+            height: 100%;
+        }
+        .aside.i{
+            text-align: center;
+            background-color: blanchedalmond;
+            overflow: auto;
+        }
+        .aside.i ul li{
+            padding: 8px 0;
+        }
+        .aside.ii{
+            right: calc(40% / 3);
+            top: 0;
+            background-color: skyblue;
+        }
+        .aside.iii{
+            right: 0;
+            top: 0;
+            background-color: orangered;
+        }
+        .tbody{
+            position: absolute;
+            left: calc(40% / 3);
+            top: 0;
+            width: 60%;
+            height: 100%;
+        }
+        .tbody .hd{
+            position: absolute;
+            box-sizing: border-box;
+            width: 100%;
+            height: 100px;
+            border-bottom: 1px solid black;
+            background-color: white;
+        }
+        .tbody .main{
+            position: absolute;
+            left: 0;
+            top: 100px;
+            width: 100%;
+            height: calc(100% - 100px);
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <div class="aside i">
+        <h2>牛津词典</h2>
+        <ul>
+            <li>单词1</li>
+            <li>单词2</li>
+            <li>单词3</li>
+            <li>单词4</li>
+            <li>单词5</li>
+            <li>单词6</li>
+            <li>单词7</li>
+            <li>单词8</li>
+            <li>单词9</li>
+            <li>单词10</li>
+            <li>单词11</li>
+            <li>单词12</li>
+            <li>单词13</li>
+            <li>单词14</li>
+            <li>单词15</li>
+            <li>单词16</li>
+            <li>单词17</li>
+            <li>单词18</li>
+            <li>单词19</li>
+            <li>单词20</li>
+            <li>单词21</li>
+            <li>单词22</li>
+            <li>单词23</li>
+            <li>单词24</li>
+            <li>单词25</li>
+            <li>单词26</li>
+            <li>单词27</li>
+            <li>单词28</li>
+            <li>单词29</li>
+            <li>单词30</li>
+            <li>单词31</li>
+            <li>单词32</li>
+            <li>单词33</li>
+            <li>单词34</li>
+            <li>单词35</li>
+            <li>单词36</li>
+            <li>单词37</li>
+            <li>单词38</li>
+            <li>单词39</li>
+            <li>单词40</li>
+            <li>单词41</li>
+            <li>单词42</li>
+            <li>单词43</li>
+            <li>单词44</li>
+            <li>单词45</li>
+            <li>单词46</li>
+            <li>单词47</li>
+            <li>单词48</li>
+            <li>单词49</li>
+            <li>单词50</li>
+        </ul>
+    </div>
+    <div class="tbody">
+        <div class="hd"></div>
+        <div class="main"></div>
+    </div>
+    <div class="aside ii"></div>
+    <div class="aside iii"></div>
+</body>
+</html>

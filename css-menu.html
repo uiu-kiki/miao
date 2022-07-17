@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .wrapper{
+            background-color: rgb(60, 60, 60);
+        }
+        ul{
+            list-style: none;
+        }
+        .sup-menu{
+            box-sizing: border-box;
+            width: 600px;
+            height: 40px;
+            padding: 8px 0;
+            margin: 0 auto;
+        }
+        .sup-menu .sup-list{
+            display: inline-block;
+            box-sizing: border-box;
+            position: relative;
+            margin: 0 12px;
+            font-size: 18px;
+            padding: 3px 6px;
+            color: rgb(204, 204, 204);
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .sup-menu .sup-list:last-of-type{
+            margin-right: 0;
+        }
+        .sub-menu{
+            display: none;
+            box-sizing: border-box;
+            position: absolute;
+            left: 0;
+            top: 27px;
+            width: 375px;
+            background-color: rgb(37, 37, 38);
+            border-radius: 10px;
+        }
+        .sub-menu li{
+            position: relative;
+            padding: 10px 0;
+            font-size: 14px;
+            border-bottom: 1px solid #ddd;
+        }
+        .sub-menu li:last-of-type{
+            border-bottom: none
+        }
+        .sub-menu li  div{
+            padding: 5px 15px;
+            z-index: 100;
+        }
+        .sub-menu li.share div .sub-share{
+            display: none;
+            box-sizing: border-box;
+            position: absolute;
+            left: 375px;
+            top: 0;
+            width: 188px;
+            height: 100%;
+            background-color: rgb(37, 37, 38);
+            padding: 10px 0;
+            text-align: center;
+            border-radius: 5px;
+            z-index: 999;
+        }
+        .sub-menu li.share div .sub-share p{
+            padding: 5px 15px;
+        }
+        .sup-menu .sup-list.file:hover {
+            background-color: rgba(133, 115, 115, 0.5);
+        }
+        .sup-menu .sup-list.file:hover > .sub-menu{
+            display: block;
+        }
+        .sub-menu li div:hover{
+            background-color: rgb(95, 95, 204);
+        }
+        .sub-menu li.share div:hover .sub-share{
+            display: block;
+        }
+        .sub-menu li.share div .sub-share:hover p{
+            background-color: rgb(95, 95, 204);
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <ul class="sup-menu">
+            <li class="sup-list file">文件
+                <ul class="sub-menu">
+                    <li>
+                        <div class="">新建文本文件</div>
+                        <div class="">新建文本...</div>
+                        <div class="">新建窗口</div>
+                    </li>
+                    <li>
+                        <div class="">打开文件...</div>
+                        <div class="">打开文件夹...</div>
+                        <div class="">从文件打开工作区</div>
+                        <div class="">打开最近的文件</div>
+                    </li>
+                    <li>
+                        <div class="">Lorem ipsum dolor</div>
+                        <div class="">Lorem ipsum dolor</div>
+                        <div class="">Lorem ipsum dolor</div>
+                    </li>
+                    <li>
+                        <div class="">Lorem ipsum dolor</div>
+                        <div class="">Lorem ipsum dolor</div>
+                        <div class="">Lorem ipsum dolor</div>
+                    </li>
+                    <li class="share">
+                        <div class="">共享 &gt;
+                            <div class="sub-share">
+                                <p>Copy vscode.dev Link</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="">自动保存</div>
+                        <div class="">Lorem ipsum dolor</div>
+                    </li>
+                    <li>
+                        <div class="">Lorem ipsum dolor</div>
+                        <div class="">Lorem ipsum dolor</div>
+                        <div class="">Lorem ipsum dolor</div>
+                        <div class="">Lorem ipsum dolor</div>
+                    </li>
+                    <li>
+                        <div class="">退出</div>
+                    </li>
+                </ul>
+            </li>
+            <li class="sup-list edit">编辑</li>
+            <li class="sup-list selec">选择</li>
+            <li class="sup-list view">查看</li>
+            <li class="sup-list go">转到</li>
+            <li class="sup-list run">运行</li>
+            <li class="sup-list terminal">终端</li>
+            <li class="sup-list help">帮助</li>
+        </ul>
+    </div>
+</body>
+</html>
