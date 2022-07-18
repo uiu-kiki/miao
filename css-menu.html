@@ -67,10 +67,14 @@
         }
 
         .sub-menu>li li  {
+            position: relative;
             padding: 5px 15px;
             z-index: 100;
         }
-
+        .sub-menu>li span{
+            position: absolute;
+            right: 15px;
+        }
         .sub-menu>li li ul {
             display: none;
             box-sizing: border-box;
@@ -78,9 +82,8 @@
             left: 100%;
             top: 0;
             width: 188px;
-            height: 100%;
             background-color: rgb(37, 37, 38);
-            padding: 10px 0;
+            xpadding: 10px 0;
             text-align: center;
             border-radius: 5px;
             z-index: 999;
@@ -97,8 +100,8 @@
         .sup-menu .sup-list:hover .sub-menu{
             display: block;
         }
-        
-        .sub-menu li:hover ul {
+
+        .sub-menu>li li:hover ul {
             display: block;
         }
 
@@ -112,7 +115,7 @@
                 <ul class="sub-menu">
                     <li>
                         <ul>
-                            <li>新建文本文件</li>
+                            <li>新建文本文件 <span>CTRL + N</span></li>
                             <li>新建文本...</li>
                             <li>新建窗口</li>
                         </ul>
@@ -134,7 +137,14 @@
                     </li>
                     <li>
                         <ul>
-                            <li>Lorem ipsum dolor</li>
+                            <li>Lorem ipsum dolor
+                                <ul>
+                                    <li>test</li>
+                                    <li>test</li>
+                                    <li>test</li>
+                                    <li>test</li>
+                                </ul>
+                            </li>
                             <li>Lorem ipsum dolor</li>
                             <li>Lorem ipsum dolor</li>
                         </ul>
