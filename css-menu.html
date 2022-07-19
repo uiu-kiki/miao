@@ -8,6 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/normalize.css">
     <style>
+        /* 1.0 增加联级菜单大于号： 让li为none不影响ul的伪元素 */
         * {
             margin: 0;
             padding: 0;
@@ -76,7 +77,7 @@
             right: 15px;
         }
         .sub-menu>li li ul {
-            display: none;
+            xdisplay: none;
             box-sizing: border-box;
             position: absolute;
             left: 100%;
@@ -87,6 +88,17 @@
             text-align: center;
             border-radius: 5px;
             z-index: 999;
+        }
+        /* 显示大于号 */
+        .sub-menu>li li ul li{
+            display: none;
+        }
+        .sub-menu>li li ul::before{
+            content: ">";
+            position: absolute;
+            xvisibility: visible;
+            left: -20px;
+            top: 5px;
         }
 
         .sup-menu .sup-list:hover {
@@ -101,7 +113,7 @@
             display: block;
         }
 
-        .sub-menu>li li:hover ul {
+        .sub-menu>li li:hover ul li{
             display: block;
         }
 
@@ -151,7 +163,7 @@
                     </li>
                     <li>
                         <ul>
-                            <li>共享 &gt;
+                            <li>共享
                                 <ul>
                                     <li>Copy vscode.dev Link</li>
                                 </ul>
