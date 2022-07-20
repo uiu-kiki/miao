@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html{
+            zoom: 2;
+        }
+        input{
+            display: none;
+        }
+        input + .box{
+            position: relative;
+            display: block;
+            width: 100px;
+            height: 50px;
+            margin: 100px auto;
+            border: 2px solid #ddd;
+            border-radius: 30px;
+            overflow: hidden;
+        }
+        input + .box > .button{
+            position: absolute;
+            left: 3%;
+            width: 49px;
+            height: 49px;
+            border-radius: 50%;
+            background-color: antiquewhite;
+            box-shadow: 0 0 3px black;
+        }
+        input:checked + .box{
+            background-color: rgb(57, 245, 82);
+            transition: 1s;
+        }
+        input:checked + .box > .button{
+            left: 48%;
+            transition: 1s;
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" name="" id="iosCheckBox">
+    <label for="iosCheckBox" class="box">
+        <div class="button"></div>
+    </label>
+</body>
+</html>

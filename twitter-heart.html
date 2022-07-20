@@ -1,38 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
         }
-        .wrapper{
+
+        .wrapper {
             width: 100px;
             height: 100px;
             overflow: hidden;
             margin: 100px auto;
-            border: 1px solid orange;
+            border: 2px solid orange;
             border-radius: 50%;
         }
-        .cartoon{
+
+        .cartoon {
             width: 2900px;
             height: 100px;
             background: url(./mao/animation.png) no-repeat;
             margin-left: 0px;
-            transition: margin 1s steps(29);
         }
-        .wrapper:hover .cartoon{
-            margin-left: -2900px;
+
+        .wrapper:hover .cartoon {
+            margin-left: -2800px;
+            transition: margin 1s steps(28);
+        }
+
+        /* 2.0  */
+        .cartoon2 {
+            margin: auto;
+            width: 100px;
+            height: 100px;
+            border: 2px solid orange;
+            background: url(./mao/animation.png) no-repeat;
+        }
+
+        .cartoon2:hover {
+            background-position: -2800px 0;
+            transition: background-position 1s steps(28);
+        }
+
+        /* 3.0 */
+        input{
+            display: none;
+            width: 50px;
+            height: 50px;
+            margin-left: 900px;
+        }
+        input + .cartoon3 {
+            display: block;
+            margin: 100px auto;
+            width: 100px;
+            height: 100px;
+            border: 2px solid orange;
+            background: url(./mao/animation.png) no-repeat;
+        }
+        input:checked + .cartoon3{
+            background-position: -2800px 0;
+            transition: background-position 1s steps(28);
         }
     </style>
 </head>
+
 <body>
+    <!-- 1.0 margin-left -->
     <div class="wrapper">
         <div class="cartoon"></div>
     </div>
+    <!-- 2.0 background-position -->
+    <div class="cartoon2"></div>
+    <!-- 3.0 -->
+    <input type="checkbox" name="" id="like">
+    <label class="cartoon3" for="like"></label>
 </body>
+
 </html>
