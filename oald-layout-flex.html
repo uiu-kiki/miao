@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html, body{
+            height: 100%;
+        }
+        .wrapper{
+            display: flex;
+            flex-flow: wrap row;
+            height: 100%;
+        }
+        .aside{
+            width: calc(40% / 3);
+            background-color: skyblue;
+        }
+        .aside.ii{
+            background-color: aqua;
+        }
+        .tbody{
+            flex-grow: 1;
+            background-color: antiquewhite
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="aside i">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. At expedita veritatis perspiciatis quasi nulla repellendus exercitationem iure porro dignissimos maiores in enim nobis, voluptate earum voluptates sequi id ullam animi.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. At expedita veritatis perspiciatis quasi nulla repellendus exercitationem iure porro dignissimos maiores in enim nobis, voluptate earum voluptates sequi id ullam animi.
+        </div>
+        <div class="tbody">
+            <div class="hd"></div>
+            <div class="main"></div>
+        </div>
+        <div class="aside ii"></div>
+        <div class="aside iii"></div>
+    </div>
+</body>
+</html>
