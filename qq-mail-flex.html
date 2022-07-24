@@ -28,13 +28,13 @@
         .aside{
             box-sizing: border-box;
             width: 192px;
-            xheight: calc(100% - 100px);
+            height: calc(100% - 100px);
             border-right: 1px solid black;
             text-align: center;
             background-color: rgb(175, 110, 75);
         }
         .main{
-            flex-grow: 1;
+            flex: 1;
             height: calc(100% - 100px);
             background-color: rgb(27, 153, 231);
         }
@@ -42,9 +42,9 @@
 </head>
 <body>
     <div class="wrapper">
-        <div class="hd">1</div>
-        <div class="aside">2</div>
-        <div class="main">3</div>
+        <div class="hd">1. </div>
+        <div class="aside">2. 不给定高内容将会溢出</div>
+        <div class="main">3. 文本内容太多而导致折行 -> 宽度应该非自动的</div>
     </div>
 </body>
 </html>
