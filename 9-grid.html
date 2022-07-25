@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .wrapper{
+            width: 200px;
+            margin: 100px auto;
+        }
+        .cube{
+            border-collapse: collapse;
+            xborder-spacing: 0 0;
+        }
+        .cube td{
+            width: 50px;
+            height: 50px;
+            border: 5px solid blue;
+            color: green;
+            text-align: center;
+        }
+        .cube td:hover{
+            border-color: red;
+        }
+        .cube2{
+            display: flex;
+            margin-top: 50px;
+            flex-flow: row wrap;
+        }
+        .cube2 .s-cube2{
+            width: 50px;
+            height: 50px;
+            border: 5px solid blue;
+            color: green;
+            text-align: center;
+            line-height: 50px;
+        }
+        .booking{
+            box-sizing: border-box;
+            display: block;
+            width: 150px;
+            height: 150px;
+            padding-top: 132px;
+            margin: 100px 0;
+            background-color: aquamarine;
+            font-size: 12px;
+        }
+        .booking:hover{
+            padding-top: 60px;
+            padding-left: 40px;
+            font-size: 20px;
+            transition: 1s;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <table class="cube">
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+            </tr>
+        </table>
+        <div class="cube2">
+            <p class="s-cube2">1</p>
+            <p class="s-cube2">2</p>
+            <p class="s-cube2">3</p>
+            <p class="s-cube2">4</p>
+            <p class="s-cube2">5</p>
+            <p class="s-cube2">6</p>
+            <p class="s-cube2">7</p>
+            <p class="s-cube2">8</p>
+            <p class="s-cube2">9</p>
+        </div>
+        <span class="booking">订阅博客</span>
+    </div>
+</body>
+</html>

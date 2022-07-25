@@ -7,26 +7,149 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .table{
+        .table {
+            width: 1000px;
+            margin: 100px auto;
             border-collapse: collapse;
-            border-spacing: 69px 15px;
         }
-        .table tr{
-            border-bottom: 1px solid rgb(222, 226, 230);
+
+        .table thead {
+            border-bottom: #212529 2px solid;
         }
+
         .table td,
-        .table th{
-            padding: 15px 0;
-            padding-right: 69px;
-        }
-        .table thead > tr th[scope="col"]{
+        .table th {
+            padding: 0.5em 0.5em;
             text-align: left;
+        }
+
+        .table tr {
+            border-bottom: #dee2e6 1px solid;
+        }
+
+        .table-dark {
+            background-color: #212529;
+            color: white;
+            border-collapse: collapse;
+        }
+
+        .table-dark thead {
+            border-bottom: white 2px solid;
+        }
+
+        .table-dark td,
+        .table-dark th {
+            padding: 0.5em 0.5em;
+            text-align: left;
+        }
+
+        .table-dark tr {
+            border-bottom: #373b3e 1px solid;
+        }
+
+        .table-dark tbody tr:hover {
+            background-color: #323539;
+        }
+
+        .table-striped {
+            border-collapse: collapse;
+        }
+
+        .table-striped thead {
+            border-bottom: #212529 2px solid;
+        }
+
+        .table-striped td,
+        .table-striped th {
+            padding: 0.5em 0.5em;
+            text-align: left;
+        }
+
+        .table-striped tr {
+            border-bottom: #dee2e6 1px solid;
+        }
+
+        .table-striped tbody tr:nth-child(odd) {
+            background-color: #f2f2f2;
+        }
+
+        .table-hover {
+            border-collapse: collapse;
+        }
+
+        .table-hover thead {
+            border-bottom: #212529 2px solid;
+        }
+
+        .table-hover td,
+        .table-hover th {
+            padding: 0.5em 0.5em;
+            text-align: left;
+        }
+
+        .table-hover tr {
+            border-bottom: #DEE2E6 1px solid;
+        }
+
+        .table-hover tbody tr:hover {
+            background-color: #ECECEC;
+        }
+
+        .table-bordered {
+            border-collapse: collapse;
+        }
+
+        .table-bordered thead {
+            border-bottom: #212529 2px solid;
+        }
+
+        .table-bordered td,
+        .table-bordered th {
+            padding: 0.5em 0.5em;
+            border: #DEE2E6 1px solid;
+            text-align: left;
+        }
+
+        .table-bordered tr {
+            border-bottom: #DEE2E6 1px solid;
+        }
+
+        .table-borderless {
+            border-collapse: collapse;
+        }
+
+        .table-borderless thead tr {
+            border: none;
+        }
+
+        .table-borderless td,
+        .table-borderless th {
+            padding: 0.5em 0.5em;
+            text-align: left;
+        }
+
+        .table-sm {
+            border-collapse: collapse;
+        }
+
+        .table-sm thead {
+            border-bottom: #212529 2px solid;
+        }
+
+        .table-sm td,
+        .table-sm th {
+            padding: 0.25em 0.25em;
+            text-align: left;
+        }
+
+        .table-sm tr {
+            border-bottom: #dee2e6 1px solid;
         }
     </style>
 </head>
 
 <body>
-    <table class="table">
+    <table class="table xtable-sm">
         <thead>
             <tr>
                 <th scope="col">#</th>

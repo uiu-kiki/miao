@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html, body{
+            height: 100%;
+        }
+        section{
+            height: 100%;
+        }
+        .aside{
+            float: left;
+            width: 200px;
+            height: 100%;
+            background-color: aqua;
+        }
+        .tbody{
+            float: left;
+            width: calc(100% - 600px);
+            height: 100%;
+            xoverflow: hidden;
+        }
+        .tbody .hd{
+            height: 100px;
+            background-color: yellow;
+            opacity: .5;
+        }
+        .tbody .main{
+            height: calc(100% - 100px);
+            background-color: pink;
+        }
+        .tbody .main p{
+            border: 5px solid black;
+        }
+        .aside.i{
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="aside">0000</div>
+        <div class="tbody">
+            <div class="hd">22222222</div>
+            <div class="main">
+                <p>11111111</p>
+            </div>
+        </div>
+        <div class="aside i">ccc</div>
+        <div class="aside ii">dddd</div>
+    </section>
+</body>
+</html>

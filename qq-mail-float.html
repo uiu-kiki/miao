@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html, body{
+            height: 100%;
+        }
+        .hd{
+            height: 100px;
+            background-color: aqua;
+        }
+        section{
+            height: calc(100% - 100px);
+        }
+        .aside{
+            float: left;
+            width: 200px;
+            height: 100%;
+            background-color: yellowgreen;
+            overflow: auto;
+            opacity: .5;
+        }
+        .main{
+            xfloat: left;
+            xwidth: calc(100% - 200px);
+            height: 100%;
+            background-color: brown;
+            overflow: hidden;
+            /* xclear: both; 向下移 */
+        }
+        .main p{
+            border: 5px solid pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="hd"></div>
+    <section>
+        <div class="aside">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid natus neque et quibusdam expedita autem sint, consectetur consequuntur laudantium asperiores rem accusamus quisquam, culpa veritatis, itaque temporibus deleniti at quae.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid natus neque et quibusdam expedita autem sint, consectetur consequuntur laudantium asperiores rem accusamus quisquam, culpa veritatis, itaque temporibus deleniti at quae.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid natus neque et quibusdam expedita autem sint, consectetur consequuntur laudantium asperiores rem accusamus quisquam, culpa veritatis, itaque temporibus deleniti at quae.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid natus neque et quibusdam expedita autem sint, consectetur consequuntur laudantium asperiores rem accusamus quisquam, culpa veritatis, itaque temporibus deleniti at quae.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid natus neque et quibusdam expedita autem sint, consectetur consequuntur laudantium asperiores rem accusamus quisquam, culpa veritatis, itaque temporibus deleniti at quae.
+        </div>
+        <div class="main">11111111111
+            <p></p>
+        </div>
+    </section>
+</body>
+</html>
