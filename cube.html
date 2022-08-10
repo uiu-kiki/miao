@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes anim-rotate {
+            from{
+                transform: rotateX(0deg) rotateY(0deg);
+            }
+            to{
+                transform: rotateX(1000deg) rotateY(19000deg);
+            }
+        }
+        section{
+            position: relative;
+            width: 500px;
+            height: 500px;
+            margin: 100px auto;
+            box-shadow: 0 0 5px;
+            transition: 5s;
+            transform-style: preserve-3d;
+            xperspective: 800px;
+            animation: anim-rotate 500s infinite;
+        }
+        section:hover{
+            xanimation-play-state: paused;
+        }
+        section:hover div{
+            box-shadow: 0 0 0 50px rgba(0, 0, 0, .4);
+        }
+        div{
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 50%;
+            height: 50%;
+            margin: auto;
+            text-align: center;
+            line-height: 250px;
+            font-size: 30px;
+            background-color: pink;
+            transition: 5s;
+            box-shadow: 0 0 0px 0 rgba(0, 0, 0, .4);
+        }
+        /* z轴取宽高一半 */
+        section .suf-1{
+            transform: rotateY(0deg) translateZ(125px);
+        }
+        section .suf-2{
+            background-color: red;
+            transform: rotateY(180deg) translateZ(125px);
+        }
+        section .suf-3{
+            background-color: aqua;
+            transform: rotateY(90deg) translateZ(125px);
+        }
+        section .suf-4{
+            background-color: rgb(172, 127, 255);
+            transform: rotateY(-90deg) translateZ(125px);
+        }
+
+        section .suf-5{
+            background-color: orange;
+            transform: rotateX(90deg) translateZ(125px);
+        }
+        section .suf-6{
+            background-color: orangered;
+            transform: rotateX(-90deg) translateZ(125px);
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <!-- 4向y轴逆时针转 z正值向左 -->
+        <!-- 5向x轴顺时针转 z向上 -->
+        <div class="suf-1">1</div>
+        <div class="suf-2">2</div>
+        <div class="suf-3">3</div>
+        <div class="suf-4">4</div>
+        <div class="suf-5">5</div>
+        <div class="suf-6">6</div>
+    </section>
+</body>
+</html>

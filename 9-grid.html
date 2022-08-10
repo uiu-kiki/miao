@@ -18,50 +18,88 @@
             border-collapse: collapse;
             xborder-spacing: 0 0;
         }
+        .cube col,
+        .cube tr{
+            border: 5px solid blue;
+        }
         .cube td{
             width: 50px;
             height: 50px;
-            border: 5px solid blue;
             color: green;
             text-align: center;
         }
         .cube td:hover{
-            border-color: red;
+            border:5px solid red;
         }
-        .cube2{
-            display: flex;
-            margin-top: 50px;
-            flex-flow: row wrap;
+        /* 2. */
+        ul{
+            list-style: none;
+            width: 180px;
+            margin-top: 100px;
+            padding-bottom: 5px;
+            /* 清除浮动，把浮动后代包裹进来 */
+            overflow: hidden;
         }
-        .cube2 .s-cube2{
+        ul li{
+            position: relative;
+            float: left;
             width: 50px;
             height: 50px;
-            border: 5px solid blue;
             color: green;
             text-align: center;
             line-height: 50px;
+            border: 5px solid blue;
+            margin: 0 -5px -5px 0;
         }
+        ul li:hover{
+            border: 5px solid red;
+            z-index: 999;
+        }
+        /* 3. */
+        section{
+            display: flex;
+            flex-wrap: wrap;
+            width: 200px;
+            margin-top: 100px;
+            xoverflow: hidden;
+        }
+        div{
+            position: relative;
+            width: 50px;
+            height: 50px;
+            color: green;
+            text-align: center;
+            line-height: 50px;
+            border: 5px solid blue;
+            margin: 0 -5px -5px 0;
+        }
+        div:hover{
+            border: 5px solid red;
+            z-index: 999;
+        }
+        /*  */
         .booking{
-            box-sizing: border-box;
-            display: block;
+            xdisplay: table-cell;
+            display: flex;
             width: 150px;
             height: 150px;
-            padding-top: 132px;
-            margin: 100px 0;
             background-color: aquamarine;
-            font-size: 12px;
+            xvertical-align: bottom;
+            align-items: flex-end;
         }
         .booking:hover{
-            padding-top: 60px;
-            padding-left: 40px;
-            font-size: 20px;
+            font-size: 24px;
             transition: 1s;
         }
     </style>
 </head>
 <body>
-    <div class="wrapper">
+    <main class="wrapper">
+        <!-- 1.表格九宫格 -->
         <table class="cube">
+            <col>
+            <col>
+            <col>
             <tr>
                 <td>1</td>
                 <td>2</td>
@@ -78,18 +116,31 @@
                 <td>9</td>
             </tr>
         </table>
-        <div class="cube2">
-            <p class="s-cube2">1</p>
-            <p class="s-cube2">2</p>
-            <p class="s-cube2">3</p>
-            <p class="s-cube2">4</p>
-            <p class="s-cube2">5</p>
-            <p class="s-cube2">6</p>
-            <p class="s-cube2">7</p>
-            <p class="s-cube2">8</p>
-            <p class="s-cube2">9</p>
-        </div>
-        <span class="booking">订阅博客</span>
-    </div>
+        <!-- 2.浮动, 但放大1.5出现问题 -->
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+        </ul>
+        <!-- 3.flex -->
+        <section>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+        </section>
+    </main>
+    <span class="booking">订阅博客</span>
 </body>
 </html>

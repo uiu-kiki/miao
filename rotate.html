@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            display: flex;
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid salmon;
+        }
+
+        div:hover {
+            transform: rotate(360deg);
+            transition: 3s linear;
+        }
+
+        div:hover span {
+            transform: rotate(-360deg);
+            transition: 3s linear;
+        }
+
+        .wrapper {
+            position: relative;
+            width: 70px;
+            height: 70px;
+            border: 1px solid #000;
+            margin: 100px auto;
+        }
+
+        .round {
+            --deg: 0deg;
+            width: 20px;
+            height: 20px;
+            background-color: pink;
+            transform: rotate(var(--deg)) translate(50px) rotate(calc(-1 * var(--deg)));
+        }
+
+        .wrapper:hover .round {
+            --deg: 360deg;
+            transform: rotate(var(--deg)) translate(50px) rotate(calc(-1 * var(--deg)));
+            transition: 2s;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div>
+        <span>(*^__^*)</span>
+    </div>
+    <section class="wrapper">
+        <p class="round"></p>
+    </section>
+    <!--
+        动画
+        animation:
+            animX 2s cubic-bezier(.36, 0, .64, 1) alternate infinite,
+            animY 2s -1s cubic-bezier(.36, 0, .64, 1) alternate infinite;
+    -->
+</body>
+
+</html>

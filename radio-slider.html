@@ -7,6 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        /*
+            1.0 初始相片都在左边-100%，进场向右移动 -> 0
+            2.0 离场应该与进场的方向相反, 准备离场的图片继续向右移动100%-动画
+            2.1 动画播完回到初始位置(左边)
+            3.0 默认动画只执行一次，从无到有，所以进场无动画离场有动画
+        */
+
+        @keyframes leave-stage {
+            from{
+                left: 0%;
+            }
+            to{
+                left: 100%;
+            }
+        }
         ul {
             list-style: none;
             margin: 0;
@@ -34,13 +49,14 @@
             height: 100%;
             overflow: hidden;
         }
-
+        /* 初始状态 */
         .imgPackage img {
             position: absolute;
             width: 100%;
             height: 100%;
             xopacity: 0;
-            left: 100%; /*基于宽*/
+            left: -100%; /*基于宽*/
+            animation: leave-stage 1s 1;
         }
 
         .wrapper .radio-box {
@@ -50,6 +66,7 @@
             transform: translate(-50%, 0);
             border: 1px solid black;
             border-radius: 20px;
+            z-index: 2000;
         }
 
         .wrapper .radio-box label {
@@ -60,7 +77,7 @@
             border: 1px solid #ddd;
             border-radius: 50%;
         }
-
+        /* 第一张图片、元素进场没有动画 */
         .wrapper input[type="radio"]:nth-child(1):checked~.imgPackage img:nth-child(1),
         .wrapper input[type="radio"]:nth-child(2):checked~.imgPackage img:nth-child(2),
         .wrapper input[type="radio"]:nth-child(3):checked~.imgPackage img:nth-child(3),
@@ -68,6 +85,8 @@
             xopacity: 1;
             left: 0;
             transition: 1s;
+            animation: none;
+            z-index: 1000;
         }
 
         .wrapper input[type="radio"]:nth-child(1):checked~.radio-box label:nth-child(1),

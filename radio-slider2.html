@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+            1.0 1/4 span 设置背景图片
+            2.0 1/4 imgPackage span 设置position
+        */
+        .wrapper input[type="radio"]:nth-child(1):checked~.imgPackage span:nth-child(1),
+        .wrapper input[type="radio"]:nth-child(2):checked~.imgPackage span:nth-child(2),
+        .wrapper input[type="radio"]:nth-child(3):checked~.imgPackage span:nth-child(3),
+        .wrapper input[type="radio"]:nth-child(4):checked~.imgPackage span:nth-child(4) {
+            left: 0;
+            transition: 1s;
+            animation: none;
+            z-index: 1000;
+        }
+
+        .wrapper input[type="radio"]:nth-child(1):checked~.radio-box label:nth-child(1),
+        .wrapper input[type="radio"]:nth-child(2):checked~.radio-box label:nth-child(2),
+        .wrapper input[type="radio"]:nth-child(3):checked~.radio-box label:nth-child(3),
+        .wrapper input[type="radio"]:nth-child(4):checked~.radio-box label:nth-child(4) {
+            background-color: rgb(0, 132, 255);
+        }
+
+        @keyframes leave-stage {
+            from{
+                left: 0%;
+            }
+            to{
+                left: 100%;
+            }
+        }
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        html{
+            zoom: 1.2;
+        }
+        .wrapper {
+            position: relative;
+            width: 600px;
+            height: 400px;
+            margin: 100px auto;
+            box-shadow: 0 0 4px black;
+        }
+
+        .wrapper input {
+            display: none;
+        }
+
+        .imgPackage {
+            box-sizing: border-box;
+            position: relative;
+            width: 25%;
+            height: 100%;
+            float: left;
+            overflow: hidden;
+        }
+        /* 初始状态 */
+        .imgPackage span {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: -100%; /*基于宽*/
+            animation: leave-stage 1s 1;
+            background-size: auto 100%;
+            /* auto 是按照原图宽高比例求得 */
+        }
+        /* !!! */
+        .wrapper .imgPackage:nth-of-type(1) span{
+            background-position: 0 0;
+        }
+        .wrapper .imgPackage:nth-of-type(2) span{
+            background-position: -150px 0;
+            /* background-position: calc(-1 * var(--width) / 4) 0; */
+        }
+        .wrapper .imgPackage:nth-of-type(3) span{
+            background-position: -300px 0;
+        }
+        .wrapper .imgPackage:nth-of-type(4) span{
+            background-position: -450px 0;
+        }
+        /* !!! */
+        .imgPackage span:nth-child(1){
+            background: url(./mao/1.jpg) no-repeat;
+        }
+        .imgPackage span:nth-child(2){
+            background: url(./mao/2.jpg) no-repeat;
+        }
+        .imgPackage span:nth-child(3){
+            background: url(./mao/3.jpg) no-repeat;
+        }
+        .imgPackage span:nth-child(4){
+            background: url(./mao/4.jpg) no-repeat;
+        }
+        .wrapper .radio-box {
+            position: absolute;
+            left: 50%;
+            bottom: 15px;
+            transform: translate(-50%, 0);
+            border: 1px solid black;
+            border-radius: 20px;
+            z-index: 2000;
+        }
+
+        .wrapper .radio-box label {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin: 0 5px;
+            border: 1px solid #ddd;
+            border-radius: 50%;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <input type="radio" name="changeImg" id="select-img-1" checked>
+        <input type="radio" name="changeImg" id="select-img-2">
+        <input type="radio" name="changeImg" id="select-img-3">
+        <input type="radio" name="changeImg" id="select-img-4">
+        <div class="imgPackage">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="imgPackage">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="imgPackage">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="imgPackage">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="radio-box">
+            <label for="select-img-1"></label>
+            <label for="select-img-2"></label>
+            <label for="select-img-3"></label>
+            <label for="select-img-4"></label>
+        </div>
+    </div>
+    <!--
+        <img src="./mao/1.jpg" alt="">
+        <img src="./mao/2.jpg" alt="">
+        <img src="./mao/3.jpg" alt="">
+        <img src="./mao/4.jpg" alt="">
+    -->
+</body>
+
+</html>

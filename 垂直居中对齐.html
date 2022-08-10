@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body > div{
+            width: 150px;
+            height: 150px;
+            margin: 100px auto;
+            border: 5px solid pink;
+        }
+        /* 1.0 */
+        .box{
+            position: relative;
+        }
+        .box .inner{
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 50px;
+            height: 50px;
+            margin: auto;
+            background-color: aqua;
+            xtext-align: center;
+            line-height: 50px;
+        }
+        /* 2.0 */
+        .box2{
+            position: relative;
+        }
+        .box2 .inner2{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            xwidth: 200px;
+            white-space: nowrap;
+            transform: translate(-50%, -50%);
+        }
+        /* 3.0 */
+        .box3{
+            display: table-cell;
+            vertical-align: middle;
+            xtext-align: center;
+        }
+        .box3 .inner3{
+            width: 50px;
+            height: 50px;
+            margin: auto;
+            background-color: aquamarine;
+        }
+        /* 4.0 */
+        .box4{
+            display: flex;
+            xjustify-content: center;
+            xalign-items: center;
+        }
+        .box4 .inner4{
+            width: 300px;
+            height: 50px;
+            background-color: orange;
+            margin: auto;
+            xflex: none;
+        }
+        /* 5.0 */
+        .box5{
+            line-height: 150px;
+            text-align: center;
+            xfont-size: 0;
+        }
+        .box5 .inner5{
+            display: inline-block;
+            width: 50px;
+            xheight: 50px;
+            line-height: normal;
+            border: 1px solid #000;
+            font-size: initial;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        1.0 定位对齐
+        前提, 内部元素必须定宽高
+    -->
+    <div class="box">
+        <div class="inner">定位1</div>
+    </div>
+    <!-- 内部元素可以比外部大，并且内部不用定宽高 -->
+    <div class="box2">
+        <div class="inner2">定位2 Lorem ipsum dolor sit amet</div>
+    </div>
+    <!--
+        匿名文本就用text-align居中
+        块级元素就得用margin
+        子元素必须比父元素小
+    -->
+    <div class="box3">
+        <div class="inner3">表3</div>
+    </div>
+    <!--
+        justify-content: center; align-items: center;
+        margin
+    -->
+    <div class="box4">
+        <div class="inner4">flex4 Lorem ipsum dolor sit amet, </div>
+    </div>
+    <!--
+        行内布局
+        内部元素可以不定高
+    -->
+    <div class="box5">
+        x<div class="inner5">行内 Lorem ipsum dolor.</div>
+    </div>
+</body>
+</html>

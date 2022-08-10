@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            xbackground-color: rgba(0, 0, 0, 0.08);
+            box-shadow: inset 0 0 1px red;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            zoom: 2;
+        }
+
+        @keyframes anim-sink {
+            from,
+            to {
+                transform: perspective(1000px) translatez(0);
+            }
+            50% {
+                transform: perspective(1000px) translatez(-100px);
+            }
+        }
+
+        div {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            transition: 1s;
+            transform-style: preserve-3d;
+            backface-visibility: hidden;
+            background-color: pink;
+        }
+
+        div p {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            line-height: 300px;
+            backface-visibility: hidden;
+        }
+
+        div .back {
+            transform: rotatey(180deg)
+        }
+
+        .interface:hover {
+            width: 300px;
+            animation: anim-sink 1s;
+        }
+        div:hover {
+            transform: perspective(1000px) rotatey(180deg);
+        }
+
+    </style>
+</head>
+
+<body>
+    <section class="interface">
+        <div>
+            <p class="front">Login</p>
+            <p class="back">Settings</p>
+        </div>
+    </section>
+</body>
+
+</html>
