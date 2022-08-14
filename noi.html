@@ -45,7 +45,7 @@
     }
     console.log(max);
 </script>
-<script type="x"  id="ch0105/06">
+<script type="x" id="ch0105/06">
     var n = parseInt(window.prompt('n个数')),
         max = 0,
         min;
@@ -336,36 +336,291 @@
     }
     console.log(count);
 </script>
-<script id="ch0105/28">
+<script type="x" id="ch0105/28">
     var k = window.prompt('整数'),
         arr = k.split(''),
         reverseArr = arr.reverse(),
-        num = Number(reverseArr.join(''));
+        num = reverseArr.join(' ');
     console.log(num);
 </script>
-<script id="ch0105/29">
+<script type="x" id="ch0105/29">
+    var k = window.prompt('整数'),
+        arr = k.split('');
+        // console.log(arr);
+        if(arr[0] == '-'){
+            arr.splice(0, 1);
+            arr.reverse();
+            if(arr[0] == '0'){
+                arr.splice(0, 1);
+            }
+            arr.splice(0,0,'-');
+            console.log(arr.join(''));
+        }else{
+            arr.reverse();
+            if(arr[0] == '0'){
+                arr.splice(0, 1);
+            }
+            console.log(arr.join(''));
+        }
+</script>
+<script type="x" id="ch0105/30">
+    var m = window.prompt('整数m'),
+        k = window.prompt('指定K个3'),
+        count = 0;
+    arr = m.split('');
+    if (+m % 19 == 0) {
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i] == 3) {
+                count++;
+            }
+        }
+        if(count == k){
+            console.log('YES');
+        }else console.log('NO');
+    }else console.log('NO');
+</script>
+<script type="x" id="ch0105/31">
+    var n = window.prompt('n盏灯'),
+        m = parseInt(window.prompt('m个人')),
+        lamp = [],
+        arr = [];
+    for (var i = 1; i <= n; i++) {
+        lamp.push(i);
+    }
+    for (var j = 1; j <= m; j++) {
+        if (j == 1) {
+            lamp = lamp.map(function(elem, index, array){
+                return elem = -elem;
+            })
+            // console.log('1: ', lamp);
+        } else if (j == 2) {
+            lamp = lamp.map(function(elem, index, array){
+                if( (index + 1) % 2 == 0){
+                    return array[index] = -array[index];
+                }else{
+                    return elem;
+                }
+            })
+            // console.log('2: ', lamp);
+        } else {
+            lamp = lamp.map(function(elem, index, array){
+                if( (index + 1) % j == 0){
+                    return array[index] = -array[index];
+                }else{
+                    return elem;
+                }
+            })
+            // console.log(`${j}: `, lamp);
+        }
+    }
+    for(var elem of lamp){
+        if(elem < 0){
+            arr.push(-elem)
+        }
+    }
+    console.log(arr);
+</script>
+<script type="x" id="ch0105/32">
+    var n = parseInt(window.prompt('n个数')),
+        q1 = 2,
+        p1 = 1,
+        temp = 0,
+        firstCompute = true;
+        result = 0;
+    for(var i = 0; i < n; i++){
+        if(firstCompute){
+            result = q1 / p1;
+            firstCompute = false;
+        }else{
+            temp = q1;
+            q1 = p1 + q1;
+            p1 = temp;
+            result += q1 / p1;
+        }
+    }
+    console.log(+result.toFixed(4));
+</script>
+<script type="x" id="ch0105/33">
+    var n = parseInt(window.prompt('n个数')),
+        p1 = -1;
+        result = 0;
+    // for(var i = 1; i <= n; i++){
+    //     result += Math.pow(-1, i - 1) / i;
+    // }
+    // console.log(+result.toFixed(4));
+
+    for(var i = 1; i <= n; i++){
+        for(var j = i - 1; j < i; j++){
+            if(j == 0){
+                p1 = 1;
+            }else{
+                p1 *= -1;
+            }
+        }
+        result += p1 / i;
+    }
+    console.log(+result.toFixed(4));
+</script>
+<script type="x" id="ch0105/34">
+    var n = parseInt(window.prompt('n个阶乘')),
+        total = 0,
+        result = 1;
+    for (var i = 1; i <= n; i++) {
+        result *= i;
+        total += result;
+    }
+    console.log(total);
+</script>
+<script type="x" id="ch0105/35">
+    var n = parseInt(window.prompt('n个阶乘')),
+        total = 1,
+        result = 1;
+    for (var i = 1; i <= n; i++) {
+        result *= i;
+        total += 1 / result;
+    }
+    console.log(total);
+</script>
+<script type="x" id="ch0105/36">
+    var base = parseInt(window.prompt('基数')),
+        power = parseInt(window.prompt('次方')),
+        result = 1,
+        total = 1;
+    for(var i = 1; i <= power; i++){
+        result *= base;
+        total += result;
+    }
+    console.log(total);
+</script>
+<script id="ch0105/37">
 
 </script>
-<script id="ch0105/30">
+<script id="ch0105/38">
 
 </script>
-<script id="ch0105/31">
+<script type="x" id="ch0105/39">
+    var n = parseInt(window.prompt('整数n')),
+        total = 0;
+    for(var i = 1; i <= n; i++){
+        if(i % 7 == 0 || ('' + i).includes('7')){
+            continue;
+        }
+        total += Math.pow(i, 2);
+    }
+    console.log(total);
+</script>
+<script type="x" id="ch0105/40">
+    var n = parseInt(window.prompt('整数n')),
+        arr = [],
+        count = 0;
+    for (var i = 1; i <= n; i++) {
+        ('' + i).indexOf('1') !== -1 ? arr.push('' + i) : '';
+    }
+    console.log(arr);
+    for(var val of arr){
+        for(var i = 0; i < val.length; i++){
+            if(val[i] == 1){
+                count++;
+            }
+        }
+    }
+    console.log(count);
+</script>
+<script type="x" id="ch0105/41">
+    var n = parseInt(window.prompt('L')),
+        m = parseInt(window.prompt('R')),
+        arr = [],
+        count = 0;
+    for(var i = n; i <= m; i++){
+        ('' + i).indexOf('2') !== -1 ? arr.push('' + i) : '';
+    }
+    console.log(arr);
+    for(var val of arr){
+        for(var i = 0; i < val.length; i++){
+            if(val[i] == 2){
+                count++;
+            }
+        }
+    }
+    console.log(count);
+</script>
+<script id="ch0105/42">
 
 </script>
-<script id="ch0105/32">
-
+<script type="x" id="ch0105/43">
+    var n = parseInt(window.prompt('整数N')),
+        arr = [];
+    for (var i = 2; i <= n; i++) {
+        if (n % i == 0) {
+            verifyPrimeNumber(i) !== undefined ? arr.push(i) : '';
+        }
+    }
+    // console.log(arr);
+    arr.sort(function(a, b){
+        return b - a;
+    })
+    // console.log(arr);
+    console.log(arr[0]);
+    function verifyPrimeNumber(n) {
+        var count = 0;
+        for (var j = n - 1; j >= 1; j--) {
+            if (n % j == 0) {
+                count++;
+            }
+        }
+        if (count == 1) {
+            return n;
+        }
+    }
 </script>
-<script id="ch0105/33">
-
+<script type="x" id="ch0105/44">
+    var n = parseInt(window.prompt('第n个质数')),
+        arr = [],
+        count = 0;
+    for (var i = 2; i <= 100; i++) {
+        for (var j = i - 1; j >= 1; j--) {
+            // console.log(i, j); 2, 1
+            if (i % j == 0) {
+                count++;
+            }
+        }
+        if (count == 1) {
+            arr.push(i)
+        }
+        count = 0;
+    }
+    console.log(arr[n-1]);
 </script>
-<script id="ch0105/34">
-
-</script>
-<script id="ch0105/35">
-
-</script>
-<script id="ch0105/36">
-
+<script type="x" id="ch0105/45">
+    var n = parseInt(window.prompt('天数')),
+        max = 1,
+        totalIncome = 0,
+        total = 0;
+    for (var i = 1; i <= n; i++) {
+        // total -> 假设全勤的天数
+        total += i;
+        if (total == n) {
+            max = i; // 最大收入
+            for (var j = 1; j <= max; j++) {
+                if (max == 1) {
+                    totalIncome = 1;
+                } else {
+                    totalIncome += Math.pow(j, 2);
+                }
+            }
+            break;
+        }
+        else if (total > n) {
+            max = i;
+            for (var i = 1; i < max; i++) {
+                totalIncome += Math.pow(i, 2);
+            }
+            // 7n - 10total + 4max
+            totalIncome += (n + max - total) * max;
+            break;
+        }
+    }
+    console.log(totalIncome);
 </script>
 
 
