@@ -1,4 +1,4 @@
-var kiki = {
+var uiu_kiki = {
 
     chunk: function (array, size = 1) {
         var res = [],
